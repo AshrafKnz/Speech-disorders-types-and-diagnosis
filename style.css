@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: Cairo, sans-serif;
+  background: #f7f5f2;
+  color: #2b2b2b;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Glass */
+.glass {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  padding: 15px;
+  max-width: 100%;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(3px);
+  border-radius: 22px;
+  text-align: center;
+}
+
+.glass h1 {
+  margin-bottom: 10px;
+}
+
+/* Curves */
+.curve-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: #f7f5f2;
+  border-top-left-radius: 100% 100%;
+  border-top-right-radius: 100% 100%;
+}
+
+/* Content */
+.content {
+  padding: 30px;
+}
+
+h2, h3 {
+  color: #c48a5a;
+}
+
+/* Author */
+.author-section {
+  background: #fff;
+}
+
+.curve-top {
+  width: 100%;
+  height: 90px;
+  background: #f7f5f2;
+  border-bottom-left-radius: 100% 100%;
+  border-bottom-right-radius: 100% 100%;
+}
+
+.author-full {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .glass h1 {
+    font-size: 22px;
+  }
+  .content {
+    padding: 20px;
+  }
+}
+
+.site-footer {
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fafafa;
+}
+
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  padding: 15px 1px 10px;
+  background: linear-gradient(135deg, #f7f5f2, #c48a5a);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* الكيرفي اللي فوق */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #ffffff; /* نفس لون خلفية قسم المؤلفة */
+  border-bottom-left-radius: 100% 80px;
+  border-bottom-right-radius: 100% 80px;
+}
+
+/* العنوان */
+.contact-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-size: 20px;
+  color: #c48a5a;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* اللينك */
+.facebook-link {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 0;
+  border-radius: 14px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.facebook-link img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  background: transparent;
+  border-radius: 14px;
+  display: block;
+}
+
+
+/* Hover */
+.facebook-link:hover {
+  transform: translateY(6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}

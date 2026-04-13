@@ -1,0 +1,57 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HERO */
+.hero img {
+  transform: scale(1.05);
+  transition: transform 1.5s ease;
+}
+
+.hero.loaded img {
+  transform: scale(1);
+}
+
+.glass {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.hero.loaded .glass {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LOADER */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #f7f5f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loader-circle {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ddd;
+  border-top: 3px solid #c48a5a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
